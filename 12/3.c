@@ -1,0 +1,28 @@
+#include<stdio.h>
+int CountTwo(int iNo)
+{
+    int iCntTwo = 0;
+    int iDigit = 0;
+
+while(iNo > 0)
+{
+iDigit = iNo % 10;
+    if (iDigit == 2)
+    { 
+        iCntTwo++;
+    }
+iNo /= 10   ; 
+}
+return iCntTwo;
+}
+
+int main()
+{
+int iValue = 0;
+int bRet = 0;
+printf("Enter number");
+scanf("%d",&iValue);
+bRet = CountTwo(iValue);
+printf("%d",bRet);
+return 0;
+}
